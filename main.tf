@@ -13,7 +13,7 @@ resource "aws_default_subnet" "default_azs" {
 
   tags = {
     Automation = "terraform"
-    Name       = "Default subnet for ${var.region}${var.azs[count.index]}"
+    Name       = "Default subnet for ${var.azs[count.index]}"
   }
 }
 
