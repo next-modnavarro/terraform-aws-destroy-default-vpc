@@ -38,6 +38,10 @@ An example that will apply to all regions in an account:
 ```hcl
 data "aws_regions" "current" {}
 
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
 module "default_vpc" {
   source = "trussworks/destroy-default-vpc/aws"
   for_each = toset(data.aws_regions.current.names)
