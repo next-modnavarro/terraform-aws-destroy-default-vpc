@@ -27,3 +27,8 @@ output "vpc_dhcp_options" {
   description = "The Default VPC DHCP Options Set"
   value       = aws_default_vpc_dhcp_options.default
 }
+
+output "internet_gateway" {
+  description = "The internet_gateway associated to default VPC"
+  value       = data.aws_internet_gateway.default
+}
